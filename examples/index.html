@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<base target="_self" href="./" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>input-switch</title>
+		<link rel="stylesheet" href="../dist/input-switch.min.css" />
+		<style>
+			html { font-size: 16px; }
+			body { font-family: "Courier New", Courier, monospace; font-weight: 300; background-color: white; margin: 1rem; }
+			body, a { color: black; }
+			h1, h2 { font-weight: 300; margin: 0; }
+			h1 { font-size: 1.5rem; margin-bottom: .75rem; }
+			h2 { font-size: 1rem; margin-bottom: .5rem; }
+			p { margin: 0; }
+			p:not(:last-of-type) { margin-bottom: 1rem; }
+			footer { margin-top: 1rem; }
+			.has-switch > input[type=radio] ~ .switch { background-color: #ff7157; }
+			.has-switch > input[type=radio]:checked ~ .switch { background-color: #5ac65a; }
+		</style>
+	</head>
+	<body>
+
+		<h1>input-switch</h1>
+
+		<h2>Default switches:</h2>
+		<p>
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch"></span>
+				Default switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch"></span>
+				Checked default switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-outline"></span>
+				Default outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-outline"></span>
+				Checked default outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch"></span>
+				Disabled default switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch"></span>
+				Disabled checked default switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch is-outline"></span>
+				Disabled default outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch is-outline"></span>
+				Disabled checked default outline switch
+			</label>
+		</p>
+
+		<h2>Square switches:</h2>
+		<p>
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-square"></span>
+				Square switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-square"></span>
+				Checked square switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-square is-outline"></span>
+				Square outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-square is-outline"></span>
+				Checked square outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch is-square"></span>
+				Disabled square switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch is-square"></span>
+				Disabled checked square switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch is-square is-outline"></span>
+				Disabled square outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch is-square is-outline"></span>
+				Disabled checked square outline switch
+			</label>
+		</p>
+
+		<h2>Round switches:</h2>
+		<p>
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-round"></span>
+				Round switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-round"></span>
+				Checked round switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-round is-outline"></span>
+				Round outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-round is-outline"></span>
+				Checked round outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch is-round"></span>
+				Disabled round switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch is-round"></span>
+				Disabled checked round switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" disabled />
+				<span class="switch is-round is-outline"></span>
+				Disabled round outline switch
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" checked disabled />
+				<span class="switch is-round is-outline"></span>
+				Disabled checked round outline switch
+			</label>
+		</p>
+
+		<h2>Checkboxes with some text:</h2>
+		<p>	
+			<label class="has-switch">
+				<input type="checkbox" checked />
+				<span class="switch is-round"></span>
+				I agree to whatever you want me to
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="checkbox" />
+				<span class="switch is-round"></span>
+				I also want your awesome newsletter
+			</label>
+		</p>
+
+		<h2>Radios with custom colors:</h2>
+		<p>
+			<label class="has-switch">
+				<input type="radio" name="example" checked />
+				<span class="switch is-round"></span>
+				Pineapple on pizza
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="radio" name="example" />
+				<span class="switch is-round"></span>
+				Fries on pizza
+			</label>
+			<br />
+			<label class="has-switch">
+				<input type="radio" name="example" disabled />
+				<span class="switch is-round"></span>
+				I'm normal
+			</label>
+		</p>
+
+	</body>
+</html> 

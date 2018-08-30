@@ -1,0 +1,42 @@
+{
+	"name": "input-switch",
+	"version": "1.0.0",
+	"description": "Simple CSS for display checkbox and radio inputs as switch buttons.",
+	"main": "src/input-switch.scss",
+	"style": "dist/input-switch.min.css",
+	"unpkg": "dist/input-switch.min.css",
+	"jsdelivr": "dist/input-switch.min.css",
+	"files": [
+		"dist/*.css",
+		"src/*.scss"
+	],
+	"directories": {
+		"example": "examples"
+	},
+	"scripts": {
+		"build": "npx node-sass src/input-switch.scss dist/input-switch.min.css --output-style=compressed && sed -i 's/[[:space:]]*~[[:space:]]*/~/g' dist/input-switch.min.css",
+		"watch": "npx node-sass src/input-switch.scss dist/input-switch.min.css --output-style=compressed --watch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oliverfindl/input-switch.git"
+	},
+	"keywords": [
+		"css",
+		"scss",
+		"checkbox",
+		"radio",
+		"input",
+		"switch",
+		"input-switch"
+	],
+	"author": "Oliver Findl",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/oliverfindl/input-switch/issues"
+	},
+	"homepage": "https://github.com/oliverfindl/input-switch#readme",
+	"devDependencies": {
+		"node-sass": "^4.9.0"
+	}
+}

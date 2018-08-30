@@ -1,0 +1,137 @@
+/**
+ * input-switch v1.0.0 (2018-08-30)
+ * Copyright 2018 Oliver Findl
+ * @license MIT
+ */
+
+@charset "utf-8";
+
+@import "_variables";
+
+.has-switch,
+.has-switch > .switch {
+	box-sizing: border-box;
+}
+
+.has-switch {
+	$switch-padding: $switch-height * .125 * 1.5;
+	$switch-pointer-size: $switch-height - $switch-padding * 2;
+
+	position: relative; display: inline-block;
+	width: auto; height: $switch-height;
+	padding: 0; padding-left: $switch-width + $switch-space-after; margin: 0;
+	border: 0; border-radius: 0;
+
+	&.has-half-space-after {
+		$switch-space-after: $switch-space-after * .5;
+
+		padding-left: $switch-width + $switch-space-after;
+
+		& > .switch {
+			margin-right: $switch-space-after;
+		}
+	}
+
+	&.has-no-space-after {
+		padding-left: $switch-width;
+
+		& > .switch {
+			margin-right: 0;
+		}
+	}
+
+	& > input {
+		&[type=checkbox],
+		&[type=radio] {
+			display: none !important;
+
+			&:checked ~ .switch {
+				background-color: $switch-primary-color;
+
+				&:before {
+					transform: translateX($switch-width - $switch-pointer-size - $switch-padding * 2);
+				}
+
+				&.is-outline {
+					background-color: $switch-transparent-color;
+					border-color: $switch-primary-color;
+
+					&:before {
+						background-color: $switch-primary-color;
+					}
+				}
+			}
+
+			&:focus ~ .switch {
+				box-shadow: 0 0 1px $switch-primary-color;
+			}
+
+			&:disabled ~ .switch {
+				opacity: .5;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	& > .switch {
+		position: absolute; left: 0;
+		width: $switch-width; height: $switch-height;
+		background-color: $switch-secondary-color;
+		padding: $switch-padding; margin: 0; margin-right: $switch-space-after;
+		border: 0; border-radius: $switch-height * .25;
+		cursor: pointer;
+		transition: 
+			background-color $switch-transition-duration $switch-transition-timing-function, 
+			border-color $switch-transition-duration $switch-transition-timing-function, 
+			transform $switch-transition-duration $switch-transition-timing-function, 
+			box-shadow $switch-transition-duration $switch-transition-timing-function;
+		
+		&:before {
+			content: "";
+			position: absolute;
+			width: $switch-pointer-size; height: $switch-pointer-size;
+			background-color: $switch-pointer-color;
+			border: 0; border-radius: $switch-pointer-size * .25;
+			cursor: pointer;
+			transition: 
+				background-color $switch-transition-duration $switch-transition-timing-function, 
+				transform $switch-transition-duration $switch-transition-timing-function;
+		}
+
+		&.is-round {
+			border-radius: $switch-height * .5;
+
+			&:before {
+				border-radius: $switch-pointer-size * .5;
+			}
+		}
+
+		&.is-square {
+			border-radius: 0;
+
+			&:before {
+				border-radius: 0;
+			}
+		}
+
+		&.is-outline {
+			$switch-padding: $switch-height * .125;
+			$switch-border-width: $switch-padding;
+			$switch-pointer-size: $switch-height - $switch-padding * 2 - $switch-border-width * 2;
+
+			background-color: $switch-transparent-color;
+			padding: $switch-padding;
+			border: $switch-border-width solid $switch-secondary-color;
+
+			&:before {
+				width: $switch-pointer-size; height: $switch-pointer-size;
+				background-color: $switch-secondary-color;
+				border-radius: $switch-pointer-size * .25;
+			}
+
+			&.is-round:before {
+				border-radius: $switch-pointer-size * .5;
+			}
+		}
+	}
+}

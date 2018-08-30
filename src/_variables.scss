@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* sizes */
+$switch-height: 1em !default;
+$switch-width: $switch-height * 1.75 !default;
+$switch-space-after: $switch-height * .5 !default;
+
+/* colors */
+$switch-primary-color: #2196f3 !default;
+$switch-secondary-color: grey !default;
+$switch-pointer-color: white !default;
+$switch-transparent-color: transparent !default;
+
+/* transitions */
+$switch-transition-duration: .5s !default;
+$switch-transition-timing-function: ease !default;
