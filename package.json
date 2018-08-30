@@ -1,6 +1,6 @@
 {
 	"name": "input-switch",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple CSS for display checkbox and radio inputs as switch buttons.",
 	"main": "src/input-switch.scss",
 	"style": "dist/input-switch.min.css",

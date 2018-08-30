@@ -19,7 +19,7 @@ Simple CSS for display checkbox and radio inputs as switch buttons.
 
 Via [npm](https://npmjs.com/) [[package](https://www.npmjs.com/package/input-switch)]:
 ```bash
-npm install input-switch
+$ npm install input-switch
 ```
 
 Via [yarn](https://yarnpkg.com/en/) [[package](https://yarnpkg.com/en/package/input-switch)]:
