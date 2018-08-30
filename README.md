@@ -83,7 +83,7 @@ Default values for all customizable variables:
 /* sizes */
 $switch-height: 1em; // default height of switch
 $switch-width: $switch-height * 1.75; // default width of switch
-$switch-space-after: $switch-height * .5; // default space after switch
+$switch-space-after-width: $switch-height * .5; // default space after switch
 
 /* colors */
 $switch-primary-color: #2196f3; // default primary color of switch

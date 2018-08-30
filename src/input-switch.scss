@@ -1,5 +1,5 @@
 /**
- * input-switch v1.0.1 (2018-08-30)
+ * input-switch v1.0.2 (2018-08-30)
  * Copyright 2018 Oliver Findl
  * @license MIT
  */
@@ -19,16 +19,16 @@
 
 	position: relative; display: inline-block;
 	width: auto; height: $switch-height;
-	padding: 0; padding-left: $switch-width + $switch-space-after; margin: 0;
+	padding: 0; padding-left: $switch-width + $switch-space-after-width; margin: 0;
 	border: 0; border-radius: 0;
 
 	&.has-half-space-after {
-		$switch-space-after: $switch-space-after * .5;
+		$switch-space-after-width: $switch-space-after-width * .5;
 
-		padding-left: $switch-width + $switch-space-after;
+		padding-left: $switch-width + $switch-space-after-width;
 
 		& > .switch {
-			margin-right: $switch-space-after;
+			margin-right: $switch-space-after-width;
 		}
 	}
 
@@ -77,7 +77,7 @@
 		position: absolute; left: 0;
 		width: $switch-width; height: $switch-height;
 		background-color: $switch-secondary-color;
-		padding: $switch-padding; margin: 0; margin-right: $switch-space-after;
+		padding: $switch-padding; margin: 0; margin-right: $switch-space-after-width;
 		border: 0; border-radius: $switch-height * .25;
 		cursor: pointer;
 		transition: 
