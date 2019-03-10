@@ -14,7 +14,7 @@
 		"example": "examples"
 	},
 	"scripts": {
-		"build": "npx node-sass src/input-switch.scss dist/input-switch.min.css --output-style=compressed && sed -i 's/[[:space:]]*~[[:space:]]*/~/g' dist/input-switch.min.css",
+		"build": "npx node-sass src/input-switch.scss dist/input-switch.min.css --output-style=compressed && npx postcss dist/input-switch.min.css --output dist/input-switch.min.css --use autoprefixer --no-map && sed -i 's/[[:space:]]*~[[:space:]]*/~/g' dist/input-switch.min.css",
 		"watch": "npx node-sass src/input-switch.scss dist/input-switch.min.css --output-style=compressed --watch"
 	},
 	"repository": {
@@ -37,6 +37,8 @@
 	},
 	"homepage": "https://github.com/oliverfindl/input-switch#readme",
 	"devDependencies": {
-		"node-sass": "^4.9.0"
+		"autoprefixer": "^9.4.10",
+		"node-sass": "^4.11.0",
+		"postcss-cli": "^6.1.2"
 	}
 }
